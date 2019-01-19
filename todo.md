@@ -3,3 +3,4 @@
 3. do I need to have a SummaryOrder class? Maybe is just a method on LiveOrderBoard.
 4. should I need to specified that #remove_order on LiveOrderBoard
 class will only receive user_id, otherwise it is going to send an error message.
+5. refactor live_order_board_spec.rb
