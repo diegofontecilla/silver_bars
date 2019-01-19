@@ -18,8 +18,8 @@ class LiveOrderBoard
   end
 
   def remove_order(user_id)
-    @order_list.each do |order|
-      @order_list.delete(order) if order[:user_id] == user_id
+    order_list.each do |order|
+      order_list.delete(order) if order[:user_id] == user_id
     end
   end
 end
@@ -31,4 +31,4 @@ end
 # live_order_board.register_order('alberto', 2.5, 500, 'BUY')
 # live_order_board.register_order('tina', 3.1, 200, 'SELL')
 # live_order_board.remove_order('alberto')
-# live_order_board.order_list
+# p live_order_board.order_list
