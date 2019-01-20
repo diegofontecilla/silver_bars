@@ -4,4 +4,7 @@
 4. should I need to specified that #remove_order on LiveOrderBoard
 class will only receive user_id, otherwise it is going to send an error message.
 5. refactor live_order_board_spec.rb
-6. idear modo en que new_order no retorne simepre order_data, para en 'remove order from list when the its user_id is equal to the given user_id' probar con otro user_id si funciona.
+6. idear modo en que new_order no retorne simepre order_data, para en 'remove order from list when the its user_id is equal to the given user_id' probar con otro user_id si funciona. e.g.: poner arguments en: string, integer...etc
+7. hacer README
+8. que metodos debieran ser privados? #add_to_order_list?
+9. pensar en sigle responsability. live_order_board esta haceidno demasiado?

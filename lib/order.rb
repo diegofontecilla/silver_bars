@@ -14,8 +14,4 @@ class Order
     return nil if @current_order == {}
     @current_order
   end
-
-  def remove_order
-    @current_order = {}
-  end
 end

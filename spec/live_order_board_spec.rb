@@ -22,13 +22,6 @@ describe do LiveOrderBoard
     end
   end
 
-  describe '#add_to_order_list' do
-    it 'add a new order on order list' do
-      live_order_board.add_to_order_list(new_order)
-      expect(live_order_board.order_list).to eq([order_data])
-    end
-  end
-
   describe '#remove_order' do
     it 'remove order from list when its user_id is equal to the given user_id' do
       live_order_board.register_order('fran', 4.5, 1500, 'BUY')
