@@ -8,12 +8,16 @@ class Summary
   end
 
   def get_summary_information(order_list)
+    create_sell_and_buy_orders_list(order_list)
+  end
+
+  private
+
+  def create_sell_and_buy_orders_list(order_list)
     order_list.each do |order|
       order[:order_type] == 'SELL' ? add_to_sell_orders_list(order) : add_to_buy_orders_list(order)
     end
   end
-
-  private
 
   def add_to_sell_orders_list(order)
     sell_orders_list << order
