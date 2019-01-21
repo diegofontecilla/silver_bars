@@ -34,9 +34,9 @@ end
 
 
 
-live_order_board = LiveOrderBoard.new
-live_order_board.register_order('robert', 8.5, 800, 'SELL')
-live_order_board.register_order('fran', 4.5, 1500, 'BUY')
-live_order_board.register_order('alberto', 2.5, 500, 'SELL')
-live_order_board.register_order('al', 3.5, 1500, 'BUY')
-p live_order_board.get_summary_information
+# live_order_board = LiveOrderBoard.new
+# live_order_board.register_order('robert', 8.5, 800, 'SELL')
+# live_order_board.register_order('fran', 4.5, 1500, 'BUY')
+# live_order_board.register_order('alberto', 2.5, 500, 'SELL')
+# live_order_board.register_order('al', 3.5, 1500, 'BUY')
+# p live_order_board.get_summary_information
