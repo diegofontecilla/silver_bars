@@ -7,10 +7,10 @@ describe Order do
   context 'new order is initialized with list of properties' do
     describe '#get_order' do
       it 'returns list of order attributes' do
-        order_attributes = {user_id: 'diego', order_quantity: 3.5, price_per_kl: 1000, order_type: 'BUY'}
+        order_attributes = {user_id: 'diego', order_quantity: 3.5, price_per_kg: 1000, order_type: 'BUY'}
         expect(order.get_order).to eq(order_attributes)
       end
     end
   end
-  
+
 end

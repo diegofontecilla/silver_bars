@@ -1,11 +1,11 @@
 
 class Order
 
-  def initialize(user_id, order_quantity, price_per_kl, order_type)
+  def initialize(user_id, order_quantity, price_per_kg, order_type)
     @current_order = {
       user_id: user_id,
       order_quantity: order_quantity,
-      price_per_kl: price_per_kl,
+      price_per_kg: price_per_kg,
       order_type: order_type
     }
   end

@@ -37,7 +37,7 @@ describe do LiveOrderBoard
     end
 
     describe '#get_summary_information' do
-      it 'calls #get_summary_information on summary instance class' do
+      it 'calls #get_summary_information on instance of summary class' do
         allow(summary).to receive(:get_summary_information)
         live_order_board.get_summary_information
         expect(summary).to have_received(:get_summary_information)
