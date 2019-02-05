@@ -23,8 +23,19 @@ class LiveOrderBoard
 
   def get_summary_information
     summary = @summary_class.new(@order_list)
-    summary.merge(summary.sales)
-    # summary.merge(summary.purchases)
+    sales = summary.merge(summary.sales)
+    purchases = summary.merge(summary.purchases)
+    print(sales)
+    print(purchases)
+  end
+
+  def print(info)
+    puts "Sales:" if info[0][:order_type] == 'SELL'
+    puts "Purchases:" if info[0][:order_type] == 'BUY'
+
+    info.each do |i|
+      puts "- #{i[:order_quantity]} kg for £#{i[:price_per_kg]}"
+    end
   end
 
   private
@@ -34,13 +45,13 @@ class LiveOrderBoard
   end
 end
 
-
-
 live_order_board = LiveOrderBoard.new
 live_order_board.register_order('fran', 4.0, 1500, 'BUY')
+live_order_board.register_order('alberto', 6.0, 400, 'BUY')
 live_order_board.register_order('alberto', 6.0, 900, 'BUY')
-live_order_board.register_order('erto', 6.0, 1500, 'BUY')
+live_order_board.register_order('erto', 6.0, 900, 'BUY')
+live_order_board.register_order('alberto', 6.0, 1500, 'SELL')
 live_order_board.register_order('alberto', 6.0, 500, 'SELL')
-live_order_board.register_order('alberto', 4.0, 500, 'SELL')
-live_order_board.register_order('al', 6.0, 800, 'SELL')
-p live_order_board.get_summary_information
+live_order_board.register_order('alberto', 5.0, 500, 'SELL')
+live_order_board.register_order('al', 7.0, 800, 'SELL')
+live_order_board.get_summary_information

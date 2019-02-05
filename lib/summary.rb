@@ -16,6 +16,9 @@ class Summary
   def merge(orders)
     prices = orders.map { |o| o.price_per_kg }.uniq
 
+    prices.sort! if orders[0][:order_type] == 'SELL'
+    prices.sort!.reverse! if orders[0][:order_type] == 'BUY'
+
     prices.map do |p|
       orders_for_price = orders.select { |o| o.price_per_kg == p }
       total_qty_for_price = orders_for_price.sum { |o| o.order_quantity }
